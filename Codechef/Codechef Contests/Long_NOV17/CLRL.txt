@@ -1,0 +1,44 @@
+#include <bits/stdc++.h>
+#define ll long long int
+#define INF 1000000001;
+using namespace std;
+ 
+int main() 
+{
+	 ll t;
+	 cin>>t;
+	 while(t--)
+	 {
+		ll n,r,number;
+		cin>>n>>r;
+		ll l=-INF;
+		ll h=+INF;
+		ll flag=0;
+		for(ll i=0;i<n;i++)
+		{
+			cin>>number;
+	
+		    if(number>l && number<h)
+			{
+				if(number>r)
+				h=number;
+				else if(number<r)
+				l=number;
+				else if(number==r && i<n-1)
+				{
+				flag=1;
+				break;
+			    }
+			}
+			else
+			flag=1;
+		}
+		if(flag==1)
+		cout<<"NO\n";
+		else
+		cout<<"YES\n";
+	}
+	return 0;
+}
+ 
+  

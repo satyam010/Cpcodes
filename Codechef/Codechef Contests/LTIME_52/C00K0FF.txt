@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main () 
+{
+	std::ios::sync_with_stdio(false); 
+	int t, n;
+	string difficulty;
+	cin >> t;
+	while(t--) 
+	{
+		
+		cin >> n;
+		set<string> s;
+		for (int i = 0; i < n; i++) 
+		{
+			cin >> difficulty;
+			if (difficulty == "easy-medium")
+				difficulty = "medium";
+			else if (difficulty == "medium-hard")
+				difficulty = "hard";
+ 
+			s.insert(difficulty);
+		}
+		if (s.size() == 5)
+			cout << "Yes" << endl;
+		else
+			cout << "No" << endl;
+	}	
+	return 0;
+}

@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main() 
+{
+	int tc;
+	cin >> tc;
+	while(tc--)
+	{
+		int a[26];
+		int b[26]={0};
+		int i,c=0;
+		string s;
+		for(i=0;i<26;i++)
+		 cin >> a[i];
+		cin >> s;
+		for(i=0;i<s.length();i++)
+		{
+			b[s[i]-97]++;
+		}
+		for(i=0;i<26;i++)
+		{
+			if(b[i]==0)
+			 c+=a[i];
+		}
+		cout<<c<<endl;
+	}
+	return 0;
+}

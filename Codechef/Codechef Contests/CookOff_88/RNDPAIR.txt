@@ -1,0 +1,38 @@
+import java.util.*;
+import java.io.*;
+class prakash_96
+{
+     public static void main(String[] args)
+     {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        while(t-- > 0) 
+        {
+            int n = sc.nextInt();
+            int a[]=new int [n];
+            int b[]=new int [n];
+            
+            for(int i=0;i<n;i++)
+            {a[i]=sc.nextInt();b[i]=a[i];}
+            
+            Arrays.sort(b);
+            
+            int max1=b[n-1];
+            int max2=b[n-2];
+            
+            int c=0;
+            
+            for(int i=0;i<n;i++)
+            for(int j=i+1;j<n;j++)
+            if(a[i]+a[j]==max1+max2)
+            c++;
+            
+            double nc2=n*(n-1)/2;
+            
+            double ans=(c*1.0)/nc2;
+            System.out.printf("%.8f\n",ans);
+            
+ 
+        }
+    }
+} 

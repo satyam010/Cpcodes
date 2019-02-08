@@ -1,0 +1,47 @@
+import java.io.*;
+class abcd
+    {
+    public static void main(String[]args)throws IOException
+    {
+    BufferedReader in=new BufferedReader (new InputStreamReader(System.in));
+         String a = null;
+          while((a=in.readLine())!= null)
+          {
+          int ca=0,cb=0,nos=0;
+          for(int i=0;i<20;i++)
+	      {
+	      char c=a.charAt(i);
+	      int d=(i+1)/2;
+	      int e=(i+2)/2;
+	      int lb=5-d;
+	      int la=5-e;
+          if(i%2==0&&c=='1')
+          ca++;
+          if(i%2==1&&c=='1')
+	      cb++;
+          if((cb+lb)<ca&&i<10)
+          {
+          	nos=i+1;
+          	break;
+          }
+          else if((ca+la)<cb&&i<10)
+          {
+          	nos=i+1;
+          	break;
+          }
+	      if((ca>cb||cb>ca)&&i%2==1&&i>=10)
+	      {
+	      nos=i+1;
+	      break;
+	      }
+}
+if(ca>cb)
+System.out.println("TEAM-A "+nos);
+ else if(ca<cb)
+ System.out.println("TEAM-B "+nos);
+ else if(ca==cb)
+ System.out.println("TIE");
+}
+  
+}
+ }

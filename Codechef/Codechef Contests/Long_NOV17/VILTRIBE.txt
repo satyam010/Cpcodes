@@ -1,0 +1,48 @@
+import java.util.*;
+class spp____ 
+{
+public static void main(String[] args)
+{
+Scanner sc=new Scanner(System.in);
+    
+            int t=sc.nextInt();
+       
+             while(t-->0)
+             {
+                  String s=sc.next();
+                  String a[]=s.split("B");
+                  String b[]=s.split("A");
+                  
+                  int ca=0,cb=0;
+                 
+                  for(int i=0;i<a.length;i++)
+                  {
+                       String y=a[i];
+                       if(y.contains("A"))
+                       {
+                       int f=y.indexOf("A");
+                       int l=y.lastIndexOf("A");
+                       ca+=l-f+1;
+                       }
+                  }
+                  
+                  for(int i=0;i<b.length;i++)
+                  {
+                       String y=b[i];
+                       if(y.contains("B"))
+                       {
+                       int f=y.indexOf("B");
+                       int l=y.lastIndexOf("B");
+                       cb+=l-f+1;
+                       }
+                  }
+                  
+                  if(s.contains("A")==false)ca=0;
+                  if(s.contains("B")==false)cb=0;
+                  
+                  System.out.println(ca+" "+cb);
+                  
+             }
+             
+}
+    }
