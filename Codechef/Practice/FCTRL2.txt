@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>   // includes every standard library file
+#include<boost/multiprecision/cpp_int.hpp>
+namespace mp = boost::multiprecision;
+using namespace std;
+#define ll long long
+#include <string>
+
+int main()
+{       
+    
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        mp::cpp_int n,f=1,i;
+        cin>>n;
+        
+        for(i=1;i<=n;i++)
+        f=f*i;
+        
+        cout << f<<endl;
+    }
+}

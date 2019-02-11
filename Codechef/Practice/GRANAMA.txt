@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        string a,b;
+        cin>>a>>b;
+        set<char> s1,s2;
+        for(int i=0;i<a.size();i++)
+        {
+            s1.insert(a[i]);
+        }
+        for(int j=0;j<b.size();j++)
+        {
+            s2.insert(b[j]);
+        }
+        sort(a.begin(),a.end());
+        sort(b.begin(),b.end());
+        if((a!=b)&&(s1==s2))
+            cout<<"NO"<<endl;
+        else
+            cout<<"YES"<<endl;
+    }
+    return 0;
+}
+ 

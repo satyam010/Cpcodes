@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+	{
+        string s;
+        cin>>s;
+        int len = s.size();
+        int ans1 = 0,ans2=0;
+        //-+-+-+
+        //012345
+        for(int i=0; i<len; i++)
+		{
+            if(i%2==0 && s[i]=='+')ans1++;   //+-+-
+            if(i%2==1 && s[i]=='-')ans1++;
+        }
+        cout<<min(ans1,len-ans1)<<endl;
+    }
+}
